@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let energy = HKQuantity(unit: .largeCalorie(), doubleValue: 100)
         let distance = HKQuantity(unit: .mile(), doubleValue: 100)
 
-        let workout = HKWorkout(activityType: .barre, start: Date(), end: Date(), duration: 100, totalEnergyBurned: energy, totalDistance: distance, device: nil, metadata: [:])
+        let workout = HKWorkout(activityType: .barre, start: Date(), end: Date(), duration: 3600, totalEnergyBurned: energy, totalDistance: distance, device: nil, metadata: [:])
 
         store.save(workout) { (success, error) -> Void in
             guard success else {
